@@ -1,0 +1,36 @@
+.site-branding {
+}
+
+.logo {
+	width: 300px;
+}
+
+.site-header {
+     border: 1px solid #e1e1e1;
+     height: 118px;
+     margin-top: $base__space-unit * 2;
+    
+}
+
+.main-navigation {
+     width: 100%;
+     margin-top: $base__space-unit;
+     border-bottom: 1px solid #e1e1e1;
+}
+
+.main-navigation li:first-child {
+border-left: 1px solid #e1e1e1;
+}
+
+.main-navigation li {
+     border-right: 1px solid #e1e1e1;
+}
+
+.main-navigation li a {
+    padding: .75rem 1.5rem;
+}
+
+.header-search {
+	float: right;
+	border: 0;
+}

@@ -18,14 +18,14 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-    font-family: times,sans-serif;
+    font-family: 'Overlock',sans-serif;
 }
 
 /* Copy */
 
 p {
 	margin-bottom: $base__space-unit;
-	font-family: verdana;
+	font-family: $font__main;
 }
 
 dfn, cite, em, i {

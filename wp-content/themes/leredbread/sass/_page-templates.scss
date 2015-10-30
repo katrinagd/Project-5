@@ -1,8 +1,18 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-#page {
-	width: 1024px;
-	margin: 0 auto;
+.site-content {
+	display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1024px;
+}
+.content-area {
+	width: 73%;
+	padding-right: 5%;
+}
+.widget-area {
+	width: 27%;
+	padding-left: 5%;
 }
 /* Front page */
