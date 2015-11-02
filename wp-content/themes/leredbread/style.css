@@ -709,25 +709,32 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-.site-content {
+.hero {
+  background: url(../../images/hero-bread.jpg) center no-repeat;
+  margin-bottom: 3rem;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 550px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1024px; }
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%; }
+  .hero .hero-text {
+    color: #fff;
+    font-family: 'Overlock',sans-serif;
+    text-transform: uppercase;
+    font-size: 6rem;
+    line-height: 1;
+    margin: 0;
+    text-shadow: 2px 1px 2px rgba(100, 100, 100, 0.75); }
 
-.content-area {
-  width: 73%;
-  padding-right: 5%; }
-
-.widget-area {
-  width: 27%;
-  padding-left: 5%; }
-
-/* Front page */
 .logo {
-  width: 300px; }
+  width: 300px;
+  margin-left: 2.5%; }
 
 .site-header {
   border: 1px solid #e1e1e1;
@@ -751,3 +758,20 @@ object {
 .header-search {
   float: right;
   border: 0; }
+
+.social {
+  color: grey;
+  float: left;
+  margin-top: 0px;
+  width: 400px; }
+  .social i {
+    padding-right: 1.5rem; }
+  .social li {
+    float: left;
+    margin: 5px 0px;
+    display: inline; }
+  .social ul {
+    list-style: none; }
+
+.social ul li {
+  display: inline; }

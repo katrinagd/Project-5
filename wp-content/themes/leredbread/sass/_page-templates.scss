@@ -1,18 +1,39 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-.site-content {
-	display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1024px;
+// .site-content {
+// 	// display: flex;
+//  //    margin-left: auto;
+//  //    margin-right: auto;
+// //     width: 1024px;
+// // }
+// // .content-area {
+// // 	width: 73%;
+// // 	padding-right: 5%;
+// // 	min-height: 80vh;
+// // }
+// // .widget-area {
+// // 	width: 27%;
+// // 	padding-left: 5%;
+// }
+
+.hero
+{
+background: url(../../images/hero-bread.jpg) center no-repeat;
+  margin-bottom: 3rem;
+  align-items: center;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+.hero-text {
+	color: $color__background-body;
+    font-family: 'Overlock',sans-serif;
+    text-transform: uppercase;
+    font-size: 6rem;
+    line-height: 1;
+    margin: 0;
+    text-shadow: 2px 1px 2px rgba(100,100,100,.75);
 }
-.content-area {
-	width: 73%;
-	padding-right: 5%;
 }
-.widget-area {
-	width: 27%;
-	padding-left: 5%;
-}
-/* Front page */

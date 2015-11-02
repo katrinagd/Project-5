@@ -1,8 +1,7 @@
-.site-branding {
-}
 
 .logo {
 	width: 300px;
+    margin-left: 2.5%;
 }
 
 .site-header {
@@ -33,4 +32,26 @@ border-left: 1px solid #e1e1e1;
 .header-search {
 	float: right;
 	border: 0;
+}
+
+.social {
+    color: grey;
+    float: left;
+    margin-top: 0px;
+    width:400px;
+     i{
+        padding-right: 1.5rem;
+    }
+    li {
+        float: left;
+        margin: 5px 0px;
+        display:inline;
+    }
+    ul {
+    list-style: none;
+}
+}
+
+.social ul li {
+    display: inline;
 }
