@@ -9,16 +9,18 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		
 		
 
 
 </header><!-- .entry-header -->
+
 <div class="entry-content">
-<?php if ( has_post_thumbnail() ) : ?>
+	<h1><?php the_title(); ?></h1>
+	<?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'large' ); ?>
 		<?php endif; ?>
-<p class='price'>Price: <?php echo esc_html( CFS()->get('price') ); ?></p>
+<h2 class='price'>Price: <?php echo esc_html( CFS()->get('price') ); ?></h2>
 	
 		<?php the_content(); ?>
 		

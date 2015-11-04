@@ -1,57 +1,121 @@
-
-.logo {
-	width: 300px;
-    margin-left: 2.5%;
-}
-
-.site-header {
-     border: 1px solid #e1e1e1;
-     height: 118px;
-     margin-top: $base__space-unit * 2;
-    
+body {
+    margin: 0 auto;
+    // width: 1024px;
+    font-family: 'Open sans', sans-serif;
+    font-size: $font-size;
+    padding-top: 2.25rem;
+    // line-height: base__space-unit;
+    // padding: 0 10%;
 }
 
 .main-navigation {
-     width: 100%;
-     margin-top: $base__space-unit;
-     border-bottom: 1px solid #e1e1e1;
+    width: 100%
 }
-
 .main-navigation li:first-child {
 border-left: 1px solid #e1e1e1;
 }
-
-.main-navigation li {
-     border-right: 1px solid #e1e1e1;
+.main-navigation li:last-child {
+border-right: 1px solid #e1e1e1;
 }
 
-.main-navigation li a {
-    padding: .75rem 1.5rem;
+
+
+.site-header {
+     border: 1px solid #e1e1e1;
+     border-bottom: 0;
+     height: 118px;
+     padding-top: 1rem;
+
+    
 }
+
+
+.site-branding {
+    padding-bottom: 1rem;
+
+    img {
+    width: 300px;
+    }
+}
+
+
+.site-branding-inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+.social-container {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+     margin-right: 2rem;
+
+    i {
+        padding-left: 2rem;
+
+    }
+}
+
+.main-navigation {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    box-shadow: 0 2px 3px #e1e1e1;
+}
+
+
+.menu-main-container {
+
+    a {
+        border-left: solid 1px silver;
+        padding: .75rem 2rem;
+        color: silver;
+        font-weight: bold;
+    }
+
+a:hover {
+   color: #400c0d;
+   border-bottom: 3px solid #db272a;
+}
+a:active {
+   color: #400c0d; 
+}
+}
+
 
 .header-search {
-	float: right;
-	border: 0;
+    
+    display: flex;
+
+    .search-field {
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+    }
+
+    button {
+        background: none;
+        border: 0;
+    }
 }
 
-.social {
-    color: grey;
-    float: left;
-    margin-top: 0px;
-    width:400px;
-     i{
-        padding-right: 1.5rem;
-    }
-    li {
-        float: left;
-        margin: 5px 0px;
-        display:inline;
-    }
-    ul {
-    list-style: none;
-}
-}
 
-.social ul li {
-    display: inline;
+.hero {
+    background: url(../../images/hero-bread.jpg) no-repeat center center;
+    height: 550px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    .hero-text {
+        color:white;
+        text-transform: uppercase;
+        font-size: 6rem;
+        font-family: $font-header;
+    }   
 }

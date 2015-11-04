@@ -257,21 +257,21 @@ th {
 
 @font-face {
   font-family: 'Overlock';
-  src: url("../fonts/overlock-bolditalic-webfont.eot");
-  src: url("../fonts/overlock-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/overlock-bolditalic-webfont.woff2") format("woff2"), url("../fonts/overlock-bolditalic-webfont.woff") format("woff"), url("../fonts/overlock-bolditalic-webfont.ttf") format("truetype"), url("../fonts/overlock-bolditalic-webfont.svg#overlockbold_italic") format("svg");
+  src: url("../../fonts/overlock-bolditalic-webfont.eot");
+  src: url("../../fonts/overlock-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/overlock-bolditalic-webfont.woff2") format("woff2"), url("../../fonts/overlock-bolditalic-webfont.woff") format("woff"), url("../../fonts/overlock-bolditalic-webfont.ttf") format("truetype"), url("../../fonts/overlock-bolditalic-webfont.svg#overlockbold_italic") format("svg");
   font-weight: bold;
   font-style: italic; }
 
 @font-face {
   font-family: 'Overlock';
-  src: url("../fonts/overlock-italic-webfont.eot");
-  src: url("../fonts/overlock-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/overlock-italic-webfont.woff2") format("woff2"), url("../fonts/overlock-italic-webfont.woff") format("woff"), url("../fonts/overlock-italic-webfont.ttf") format("truetype"), url("../fonts/overlock-italic-webfont.svg#overlockitalic") format("svg");
+  src: url("../../fonts/overlock-italic-webfont.eot");
+  src: url("../../fonts/overlock-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/overlock-italic-webfont.woff2") format("woff2"), url("../../fonts/overlock-italic-webfont.woff") format("woff"), url("../../fonts/overlock-italic-webfont.ttf") format("truetype"), url("../../fonts/overlock-italic-webfont.svg#overlockitalic") format("svg");
   font-style: italic; }
 
 @font-face {
   font-family: 'Overlock';
-  src: url("../fonts/overlock-regular-webfont.eot");
-  src: url("../fonts/overlock-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/overlock-regular-webfont.woff2") format("woff2"), url("../fonts/overlock-regular-webfont.woff") format("woff"), url("../fonts/overlock-regular-webfont.ttf") format("truetype"), url("../fonts/overlock-regular-webfont.svg#overlockregular") format("svg"); }
+  src: url("../../fonts/overlock-regular-webfont.eot");
+  src: url("../../fonts/overlock-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/overlock-regular-webfont.woff2") format("woff2"), url("../../fonts/overlock-regular-webfont.woff") format("woff"), url("../../fonts/overlock-regular-webfont.ttf") format("truetype"), url("../../fonts/overlock-regular-webfont.svg#overlockregular") format("svg"); }
 
 /*--------------------------------------------------------------
 # Typography
@@ -709,6 +709,26 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+.wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1024px; }
+
+.content-area #primary {
+  width: 73%;
+  padding-right: 5%;
+  min-height: 80vh; }
+
+.widget-area #secondary {
+  width: 27%;
+  padding-left: 5%; }
+
+/*--------------------------------------------------------------
+# Front page
+--------------------------------------------------------------*/
 .hero {
   background: url(../../images/hero-bread.jpg) center no-repeat;
   margin-bottom: 3rem;
@@ -732,46 +752,178 @@ object {
     margin: 0;
     text-shadow: 2px 1px 2px rgba(100, 100, 100, 0.75); }
 
-.logo {
-  width: 300px;
-  margin-left: 2.5%; }
+.product-blocks {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .product-blocks .product-wrapper {
+    width: 25%; }
+    .product-blocks .product-wrapper img {
+      width: 50%; }
 
-.site-header {
-  border: 1px solid #e1e1e1;
-  height: 118px;
-  margin-top: 3em; }
+.latest-news {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .latest-news li {
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    -webkit-flex: 1 0 25%;
+        -ms-flex: 1 0 25%;
+            flex: 1 0 25%;
+    max-width: 25%;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    display: list-item;
+    overflow: hidden; }
+  .latest-news .post-info-wrapper {
+    padding: .75rem; }
+  .latest-news .thumbnail-wrapper {
+    height: 200px;
+    overflow: hidden;
+    position: relative; }
+
+/*--------------------------------------------------------------
+# Products page
+--------------------------------------------------------------*/
+.product-grid {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+  margin-bottom: 1.5rem; }
+  .product-grid .product-grid-item {
+    border: 1px solid #e1e1e1;
+    -webkit-flex: 0 1 25%;
+        -ms-flex: 0 1 25%;
+            flex: 0 1 25%;
+    max-width: 25%;
+    display: list-item; }
+  .product-grid .product-info {
+    padding: .75rem 1rem; }
+  .product-grid .price {
+    float: right;
+    padding-left: .25rem;
+    background: #fff; }
+
+body {
+  margin: 0 auto;
+  font-family: 'Open sans', sans-serif;
+  font-size: 16px;
+  padding-top: 2.25rem; }
 
 .main-navigation {
-  width: 100%;
-  margin-top: 1.5em;
-  border-bottom: 1px solid #e1e1e1; }
+  width: 100%; }
 
 .main-navigation li:first-child {
   border-left: 1px solid #e1e1e1; }
 
-.main-navigation li {
+.main-navigation li:last-child {
   border-right: 1px solid #e1e1e1; }
 
-.main-navigation li a {
-  padding: .75rem 1.5rem; }
+.site-header {
+  border: 1px solid #e1e1e1;
+  border-bottom: 0;
+  height: 118px;
+  padding-top: 1rem; }
+
+.site-branding {
+  padding-bottom: 1rem; }
+  .site-branding img {
+    width: 300px; }
+
+.site-branding-inner {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.social-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  margin-right: 2rem; }
+  .social-container i {
+    padding-left: 2rem; }
+
+.main-navigation {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  box-shadow: 0 2px 3px #e1e1e1; }
+
+.menu-main-container a {
+  border-left: solid 1px silver;
+  padding: .75rem 2rem;
+  color: silver;
+  font-weight: bold; }
+
+.menu-main-container a:hover {
+  color: #400c0d;
+  border-bottom: 3px solid #db272a; }
+
+.menu-main-container a:active {
+  color: #400c0d; }
 
 .header-search {
-  float: right;
-  border: 0; }
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .header-search .search-field {
+    background-color: transparent;
+    border: 0;
+    outline: 0; }
+  .header-search button {
+    background: none;
+    border: 0; }
 
-.social {
-  color: grey;
-  float: left;
-  margin-top: 0px;
-  width: 400px; }
-  .social i {
-    padding-right: 1.5rem; }
-  .social li {
-    float: left;
-    margin: 5px 0px;
-    display: inline; }
-  .social ul {
-    list-style: none; }
-
-.social ul li {
-  display: inline; }
+.hero {
+  background: url(../../images/hero-bread.jpg) no-repeat center center;
+  height: 550px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .hero .hero-text {
+    color: white;
+    text-transform: uppercase;
+    font-size: 6rem;
+    font-family: "overlock", "sans-serif"; }

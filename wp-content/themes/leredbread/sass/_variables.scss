@@ -19,6 +19,16 @@ $color__link: #808080;
 $color__link-visited: #808080;
 $color__link-hover: #222222;
 
+// Colors
+$color-background-main: #ffffff;
+$color-off-white: #fafafa;
+$color-brand-red: #db272a;
+$color-brand-brown: #400c0d;
+$color-brand-light-grey: #a1a1a1;
+$color-brand-medium-grey: #808080;
+$color-brand-dark-grey: #333333;
+$color-brand-black: #222222;
+
 // Typography
 
 $font__main: 'Open sans', sans-serif;
@@ -26,3 +36,7 @@ $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+
+$font-header: "overlock", "sans-serif";
+$font-size: 16px;
+
