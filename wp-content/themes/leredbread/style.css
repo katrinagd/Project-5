@@ -709,13 +709,16 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+.container {
+  width: 1024px;
+  margin: 0 auto; }
+
 .wrapper {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin-left: auto;
-  margin-right: auto;
-  width: 1024px; }
+  margin-right: auto; }
 
 .content-area #primary {
   width: 73%;
@@ -767,31 +770,54 @@ object {
     .product-blocks .product-wrapper img {
       width: 50%; }
 
+hr.decorative {
+  border: none;
+  color: #e1e1e1;
+  margin-bottom: 3rem;
+  max-width: 320px;
+  padding: 0;
+  width: 50%; }
+
 .latest-news {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  margin: 0 auto; }
   .latest-news li {
     background-color: #fff;
     border: 1px solid #e1e1e1;
     -webkit-flex: 1 0 25%;
         -ms-flex: 1 0 25%;
             flex: 1 0 25%;
-    max-width: 25%;
+    max-width: 300px;
     list-style: none;
     margin-left: 0;
     padding-left: 0;
-    display: list-item;
-    overflow: hidden; }
+    overflow: hidden;
+    display: block; }
   .latest-news .post-info-wrapper {
-    padding: .75rem; }
+    padding: .75rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left; }
+    .latest-news .post-info-wrapper a {
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold; }
+    .latest-news .post-info-wrapper .entry-meta {
+      color: #a1a1a1;
+      font-size: .9rem; }
   .latest-news .thumbnail-wrapper {
     height: 200px;
     overflow: hidden;
     position: relative; }
+    .latest-news .thumbnail-wrapper img {
+      max-width: none;
+      position: absolute; }
 
 /*--------------------------------------------------------------
 # Products page
@@ -809,11 +835,19 @@ object {
   margin-bottom: 1.5rem; }
   .product-grid .product-grid-item {
     border: 1px solid #e1e1e1;
-    -webkit-flex: 0 1 25%;
-        -ms-flex: 0 1 25%;
-            flex: 0 1 25%;
-    max-width: 25%;
-    display: list-item; }
+    -webkit-flex: 1 0 25%;
+        -ms-flex: 1 0 25%;
+            flex: 1 0 25%;
+    max-width: 250px;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    overflow: hidden;
+    position: relative;
+    height: 250px; }
+    .product-grid .product-grid-item img {
+      max-width: none;
+      position: absolute; }
   .product-grid .product-info {
     padding: .75rem 1rem; }
   .product-grid .price {

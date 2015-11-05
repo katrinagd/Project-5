@@ -1,6 +1,12 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+.container {
+    width: 1024px;
+    margin: 0 auto;
+
+}
+
 .site-content {
 	
     
@@ -10,7 +16,6 @@
 	display: flex;
 margin-left: auto;
 margin-right: auto;
-width: 1024px;
 }
 
 .content-area #primary {
@@ -66,31 +71,68 @@ background: url(../../images/hero-bread.jpg) center no-repeat;
 	}
 }
 
+hr.decorative {
+    border: none;
+    color: #e1e1e1;
+    margin-bottom: 3rem;
+    max-width: 320px;
+    padding: 0;
+    width: 50%;
+}
+
 .latest-news {
 	display: flex;
     justify-content: space-between;
+    margin: 0 auto;
+
+
+    // ul {
+    // 	margin-left: 1.5rem;
+    // }
 
      li {
     background-color: #fff;
     border: 1px solid #e1e1e1;
     flex: 1 0 25%;
-    max-width: 25%;
+    max-width: 300px;
     list-style: none;
     margin-left: 0;
     padding-left: 0;
-    display: list-item;
     overflow: hidden;
+    display: block;
+    
 }
 
 	.post-info-wrapper{
+		
 		padding: .75rem;
-	}
-	.thumbnail-wrapper {
-		height: 200px;
 		overflow: hidden;
-	    
-	    position: relative;
-	}
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	    text-align: left;
+		   a {
+		   	text-decoration: none;
+		   	font-size: 1rem;
+		   	font-weight: bold;
+		   }
+		   .entry-meta {
+		   	color: #a1a1a1;
+            font-size: .9rem;
+		   }
+
+		   
+			}
+			.thumbnail-wrapper {
+				height: 200px;
+				overflow: hidden;
+			    position: relative;
+			    img {
+			    	// left: 50%;
+		    max-width: none;
+		    position: absolute;
+		    // top: 50%;
+			    }
+			}
 }
 
 /*--------------------------------------------------------------
@@ -102,19 +144,34 @@ background: url(../../images/hero-bread.jpg) center no-repeat;
 	flex-wrap: wrap;
     align-content: flex-start;
     margin-bottom: 1.5rem;
+    // justify-content: space-between;
 
     .product-grid-item {
+    
     border: 1px solid #e1e1e1;
-    flex: 0 1 25%;
-    max-width: 25%;
-    display: list-item;
-}
-.product-info {
-    padding: .75rem 1rem;
-}
-.price {
-    float: right;
-    padding-left: .25rem;
-    background: #fff;
-}
+    flex: 1 0 25%;
+    max-width: 250px;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    overflow: hidden;
+	position: relative;
+	height: 250px;
+
+	    img {
+	    	// left: 50%;
+    max-width: none;
+    position: absolute;
+    // top: 50%;
+	    }
+	}
+	
+	.product-info {
+	    padding: .75rem 1rem;
+	}
+	.price {
+	    float: right;
+	    padding-left: .25rem;
+	    background: #fff;
+	}
 }

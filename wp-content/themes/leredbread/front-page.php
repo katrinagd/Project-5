@@ -12,8 +12,8 @@ get_header(); ?>
 			<section class="hero">
 				<span class="hero-text">Baked to Perfection</span>
 			</section>
-
-<section class="product-info container">
+<div class="container">
+<section class="product-info">
                      <div class="product-blocks">
                                  <div class="product-wrapper">
                     <img src="<?php echo get_template_directory_uri();?>/images/bread.png" alt="Bread"/>
@@ -37,36 +37,39 @@ get_header(); ?>
                   </div>
                            </div>
                </section>
-
+</div>
       <section class="call-to-action clearfix">
          <p>
             <span>All our products are made fresh daily from locally-sourced ingredients. Our menu is updated frequently.</span>
             <a href="" class="btn">See Our Products</a>
          </p>
       </section>
-<ul class="latest-news">
- 
-<?php
-$args = array( 'posts_per_page' => 4 );
-$lastposts = get_posts( $args );
-foreach ( $lastposts as $post ) :
-  setup_postdata( $post ); ?>
-   <li>
- <div class="thumbnail-wrapper"><?php 
-if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-  the_post_thumbnail( 'medium');
-} 
-?></div>
-<div class="post-info-wrapper"><h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-<p><?php the_time('M j, Y'); ?>
-<!-- display the post's comments in numerical -->
-<?php comments_number(__('/ 0 Comments'), __('/ 1 Comments'), __('/ % Comments')) ?></p></div>
-<?php endforeach; 
-wp_reset_postdata(); ?>
-</li>
-</ul>
+      <div class="container">
+      <h2>OUR LATEST NEWS</h2>
+      <hr class="decorative" />
+        <ul class="latest-news">
+         
+        <?php
+        $args = array( 'posts_per_page' => 4 );
+        $lastposts = get_posts( $args );
+        foreach ( $lastposts as $post ) :
+          setup_postdata( $post ); ?>
+           <li>
+         <div class="thumbnail-wrapper"><?php 
+        if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+          the_post_thumbnail();
+        } 
+        ?></div>
+        <div class="post-info-wrapper"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        <p class="entry-meta"><?php the_time('M j, Y'); ?>
+        <!-- display the post's comments in numerical -->
+        <?php comments_number(__('/ 0 Comments'), __('/ 1 Comments'), __('/ % Comments')) ?></p></div>
+        <?php endforeach; 
+        wp_reset_postdata(); ?>
+        </li>
+        </ul>
 
-
+  </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

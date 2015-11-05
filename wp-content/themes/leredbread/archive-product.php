@@ -6,7 +6,7 @@
  */
 
 get_header(); ?>
-
+<div class="container">
 	<div id="primary" class="content-area">
 		<h1 class="page-title">Our Products Are Made Fresh Daily</h1>
 		<main id="main" class="site-main" role="main">
@@ -49,7 +49,7 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+</div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
 
