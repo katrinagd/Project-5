@@ -1,3 +1,4 @@
+<?php /* Template Name: Full width */ ?>
 
 	<?php
 /**
@@ -8,14 +9,20 @@
 
 get_header(); ?>
 <div class="site-content">
-	<div id="primary" class="content-area">
+	<div id="primary">
 		
 		<!-- <main id="main" class="site-main" role="main"> -->
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
+				
+				<?php echo CFS()->get('subtitle'); ?>
+				<div class="about-block"><div class="about-block-item">
+					<?php echo CFS()->get('team'); ?></div>
+				    <div class="about-block-item"><?php echo CFS()->get('bakery'); ?></div></div>
+
+				<?php echo CFS()->get('story'); ?>
 			<?php endwhile; // End of the loop. ?>
 
 		<!-- </main> --><!-- #main -->
@@ -23,5 +30,4 @@ get_header(); ?>
 
 	<!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

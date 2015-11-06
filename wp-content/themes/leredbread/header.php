@@ -59,6 +59,7 @@
 						<button><i class="fa fa-search"></i></button>
 					</div>
 				</nav><!-- #site-navigation -->
+
 			</header><!-- #masthead -->
 
-			<div id="content" class="site-content">
+			

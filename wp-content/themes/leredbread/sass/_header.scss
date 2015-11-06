@@ -26,12 +26,15 @@ border-right: 1px solid #e1e1e1;
      height: 118px;
      padding-top: 1rem;
 
+
+
     
 }
 
 
 .site-branding {
     padding-bottom: 1rem;
+
 
     img {
     width: 300px;
@@ -44,10 +47,12 @@ border-right: 1px solid #e1e1e1;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+         @include container;
     }
 
 
 .social-container {
+
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -65,6 +70,8 @@ border-right: 1px solid #e1e1e1;
     border-top: 1px solid #e1e1e1;
     border-bottom: 1px solid #e1e1e1;
     box-shadow: 0 2px 3px #e1e1e1;
+    
+
 }
 
 
