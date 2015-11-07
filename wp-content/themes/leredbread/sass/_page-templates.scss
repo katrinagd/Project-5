@@ -2,8 +2,7 @@
 # Page Templates
 --------------------------------------------------------------*/
 .container {
-    width: 1024px;
-    margin: 0 auto;
+    @include container;
 
 }
 
@@ -13,22 +12,12 @@
     @include container;
 }
 
-// .wrapper {
-// 	display: flex;
-// 	// flex-direction: column;
-// 	// margin-left: auto;
-// 	// margin-right: auto;
-// 	// max-width:1024px;
-// 	width: 100%;
-//     // margin:0 auto;
-
-// }
-
 .content-area  {
 	width: 73%;
 	padding-right: 5%;
 	// min-height: 80vh;
 	// flex-grow:1;
+	border-right: 1px solid #e1e1e1;
 }
 
 
@@ -40,8 +29,18 @@
 
 .entry-title {
 	text-transform: uppercase;
+	color: $color-brand-brown;
+	text-align: center;
 }
 
+.page-header {
+	text-align: center;
+	h1 {
+		text-transform: uppercase;
+		line-height: 1.5rem;
+		padding-top: 2rem;
+	}
+}
 /*--------------------------------------------------------------
 # Front page
 --------------------------------------------------------------*/
@@ -190,42 +189,48 @@ background: url(../../images/hero-bread.jpg) center no-repeat;
 
 .product-grid {
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: wrap row;
 	justify-content: space-around;
-	// flex-direction: row;
-	// flex-wrap: wrap;
- //    align-content: flex-start;
- //    margin-bottom: 1.5rem;
-    // justify-content: space-between;
-
-    .product-grid-item {
+    align-content: flex-start;
+    margin-bottom: 1.5rem;
+    @include container;
     
-    border: 1px solid #e1e1e1;
-    flex: 1 0 25%;
-    max-width: 250px;
-    list-style: none;
-    margin-left: 0;
+    .product-grid-item {
+    	width: 25%;
+    	border: 1px solid #e1e1e1;
+        margin-left: 0;
     padding-left: 0;
-    overflow: hidden;
-	position: relative;
-	height: 250px;
+    // overflow: hidden;
+	// position: relative;
+	// height: 250px;
 
-	    img {
-	    	// left: 50%;
-    max-width: none;
-    position: absolute;
-    // top: 50%;
-	    }
+	   //  img {
+	   //  	left: 50%;
+    // max-width: none;
+    // position: absolute;
+    // // top: 50%;
+	   //  }
 	}
 
 	.product-info {
-	    padding: .75rem 1rem;
+	    padding-left: .25rem;
+	    padding-bottom: 1rem;
+	    margin-top: 1rem;
+	    background: #fff;
+       &::before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    content: "...................................................";
+}
 	}
+
 	.price {
 	    float: right;
-	    padding-left: .25rem;
+	    padding-right: .25rem;
 	    background: #fff;
-	}
+	    padding-bottom: 1rem;
+	    }
 }
 
 /*--------------------------------------------------------------
@@ -234,9 +239,81 @@ background: url(../../images/hero-bread.jpg) center no-repeat;
 .about-block {
 	display: flex;
     justify-content: space-between;
+
+    h3 {
+    color: #400c0d;
+    font-size: 1.6rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+}
+
 }
 
 .about-block-item {
 flex: 0 1 47.5%;
 }
 
+.sub-head {
+    color: #a1a1a1;
+}
+
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+.widget-area{
+
+h2{ text-transform: uppercase;
+        font-size: 1.25rem;
+            }
+
+    p{
+        font-size: 0.7rem;
+    }
+    a{  color: $color-brand-red;
+        text-decoration: none;
+    }
+    i{
+        color: $color-brand-medium-grey;
+        padding-right: 0.5rem;
+    }}
+
+.day-of-week {
+	color: $color-brand-red;
+	font-weight: bold;
+}
+
+
+
+
+/*--------------------------------------------------------------
+# Product-type
+--------------------------------------------------------------*/
+
+.page-header-product-type{
+	border-bottom: 1px dashed #d2d2d2;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.entry-title-product-type{
+	text-align: left;
+	text-transform: uppercase;
+    
+}
+.taxonomy-description-product-type
+{
+	text-align: left;
+}
+
+.product-menu-item {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 1.5rem;
+}
+
+.product-info {
+    padding: 0 1.5rem;
+    .entry-title {
+    line-height: 1;
+    margin-bottom: 1.5rem;}
+}

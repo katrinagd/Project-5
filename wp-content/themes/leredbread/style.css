@@ -400,16 +400,20 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
+  color: #fff;
+  border: none;
   border-radius: 3px;
-  background: #e6e6e6;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  font-size: 0.75rem;
+  background: #400c0d;
+  color: #fff;
+  cursor: pointer;
   line-height: 1;
-  padding: .6em 1em .4em;
+  padding: .75rem 1.5rem;
+  text-decoration: none;
+  font-weight: 0;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.2;
+  padding: .6em 5em .4em;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
   button:hover,
   input[type="button"]:hover,
@@ -710,8 +714,9 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 .container {
-  width: 1024px;
-  margin: 0 auto; }
+  margin-left: auto;
+  margin-right: auto;
+  width: 1024px; }
 
 .site-content {
   display: -webkit-flex;
@@ -723,14 +728,24 @@ object {
 
 .content-area {
   width: 73%;
-  padding-right: 5%; }
+  padding-right: 5%;
+  border-right: 1px solid #e1e1e1; }
 
 .widget-area {
   width: 27%;
   padding-left: 5%; }
 
 .entry-title {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #400c0d;
+  text-align: center; }
+
+.page-header {
+  text-align: center; }
+  .page-header h1 {
+    text-transform: uppercase;
+    line-height: 1.5rem;
+    padding-top: 2rem; }
 
 /*--------------------------------------------------------------
 # Front page
@@ -859,33 +874,39 @@ object {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -webkit-flex-flow: wrap row;
+      -ms-flex-flow: wrap row;
+          flex-flow: wrap row;
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
-          justify-content: space-around; }
+          justify-content: space-around;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1024px; }
   .product-grid .product-grid-item {
+    width: 25%;
     border: 1px solid #e1e1e1;
-    -webkit-flex: 1 0 25%;
-        -ms-flex: 1 0 25%;
-            flex: 1 0 25%;
-    max-width: 250px;
-    list-style: none;
     margin-left: 0;
-    padding-left: 0;
-    overflow: hidden;
-    position: relative;
-    height: 250px; }
-    .product-grid .product-grid-item img {
-      max-width: none;
-      position: absolute; }
+    padding-left: 0; }
   .product-grid .product-info {
-    padding: .75rem 1rem; }
+    padding-left: .25rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+    background: #fff; }
+    .product-grid .product-info::before {
+      float: left;
+      width: 0;
+      white-space: nowrap;
+      content: "..................................................."; }
   .product-grid .price {
     float: right;
-    padding-left: .25rem;
-    background: #fff; }
+    padding-right: .25rem;
+    background: #fff;
+    padding-bottom: 1rem; }
 
 /*--------------------------------------------------------------
 # About page
@@ -897,11 +918,71 @@ object {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  .about-block h3 {
+    color: #400c0d;
+    font-size: 1.6rem;
+    margin-bottom: 0;
+    padding-bottom: 0; }
 
 .about-block-item {
   -webkit-flex: 0 1 47.5%;
       -ms-flex: 0 1 47.5%;
           flex: 0 1 47.5%; }
+
+.sub-head {
+  color: #a1a1a1; }
+
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+.widget-area h2 {
+  text-transform: uppercase;
+  font-size: 1.25rem; }
+
+.widget-area p {
+  font-size: 0.7rem; }
+
+.widget-area a {
+  color: #db272a;
+  text-decoration: none; }
+
+.widget-area i {
+  color: #808080;
+  padding-right: 0.5rem; }
+
+.day-of-week {
+  color: #db272a;
+  font-weight: bold; }
+
+/*--------------------------------------------------------------
+# Product-type
+--------------------------------------------------------------*/
+.page-header-product-type {
+  border-bottom: 1px dashed #d2d2d2;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem; }
+
+.entry-title-product-type {
+  text-align: left;
+  text-transform: uppercase; }
+
+.taxonomy-description-product-type {
+  text-align: left; }
+
+.product-menu-item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 1.5rem; }
+
+.product-info {
+  padding: 0 1.5rem; }
+  .product-info .entry-title {
+    line-height: 1;
+    margin-bottom: 1.5rem; }
 
 body {
   margin: 0 auto;
@@ -1012,3 +1093,57 @@ body {
     text-transform: uppercase;
     font-size: 6rem;
     font-family: "overlock", "sans-serif"; }
+
+.site-footer {
+  background-color: #222222; }
+
+.footer-block {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1024px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Open sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1rem; }
+  .footer-block img {
+    width: 250px;
+    height: auto; }
+  .footer-block h2 {
+    text-transform: uppercase;
+    font-size: 1.25rem; }
+  .footer-block p {
+    color: white; }
+  .footer-block a {
+    color: white;
+    text-decoration: none; }
+  .footer-block i {
+    color: white;
+    padding-right: 0.5rem; }
+  .footer-block .days {
+    font-weight: bold; }
+
+.site-info {
+  background-color: #333333;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.8rem;
+  color: white; }

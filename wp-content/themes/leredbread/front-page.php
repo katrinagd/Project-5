@@ -22,7 +22,7 @@ get_header(); ?>
                 <li class="product-wrapper">
                     <img src="<?php echo get_template_directory_uri() ?>/images/<?php echo $term->slug ?>.png"
                          alt="<?php echo $term->slug ?>">
-                    <h3><?php echo $term->name ?></h3>
+                    <h3 class="entry-title"><?php echo $term->name ?></h3>
                     <p><?php echo $term->description;?>
                         <a href="<?php echo get_term_link( $term ); ?>">See More...</a>
                     </p>
@@ -44,7 +44,7 @@ get_header(); ?>
       </div>
 
       
-      <h2>OUR LATEST NEWS</h2>
+      <h1 class="page-header">OUR LATEST NEWS</h1>
       <hr class="decorative" />
         <ul class="latest-news">
          
