@@ -58,7 +58,11 @@ textarea {
 	&:focus {
 		color: #111;
 	}
+
 }
+input[type=search], textarea {
+        border: 0;
+    }
 
 input[type="text"],
 input[type="email"],
@@ -71,4 +75,14 @@ input[type="search"] {
 textarea {
 	padding-left: 3px;
 	width: 100%;
+}
+
+.search-field {
+	padding: 0;
+	text-align: right;
+
+
+}
+.search-submit {
+	color: $color-brand-medium-grey;
 }

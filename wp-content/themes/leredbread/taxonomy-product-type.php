@@ -27,7 +27,7 @@ get_header(); ?>
 			<?php if ( has_post_thumbnail() ) : ?>
 				<?php the_post_thumbnail( 'thumbnail' ); ?>
 			<?php endif; ?>
-	<div class="product-info">
+	<div class="product-info-type">
 
 			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 

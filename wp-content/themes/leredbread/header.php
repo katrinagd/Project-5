@@ -45,21 +45,23 @@
 				</div><!-- .site-branding -->
 
 
-
-
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					
+<nav id="site-navigation" class="main-navigation" role="navigation">
+					<div class="container clearfix">
 					<div class="menu-main-container">
-						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
+						<div class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></div>
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					</div>
+					<?php get_search_form();?>
 				
-					<div class="header-search">
-						<input class="search-field" type="search" title="Search for:" name="s" value="" placeholder="SEARCH ..."></input>
-						<button><i class="fa fa-search"></i></button>
+					
 					</div>
 				</nav><!-- #site-navigation -->
 
 			</header><!-- #masthead -->
 
+
+
 			
+
+					
+				

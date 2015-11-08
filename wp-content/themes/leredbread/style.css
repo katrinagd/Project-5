@@ -449,6 +449,9 @@ textarea {
   textarea:focus {
     color: #111; }
 
+input[type=search], textarea {
+  border: 0; }
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -459,6 +462,13 @@ input[type="search"] {
 textarea {
   padding-left: 3px;
   width: 100%; }
+
+.search-field {
+  padding: 0;
+  text-align: right; }
+
+.search-submit {
+  color: #808080; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -846,26 +856,28 @@ object {
     padding-left: 0;
     overflow: hidden;
     display: block; }
-  .latest-news .post-info-wrapper {
-    padding: .75rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    text-align: left; }
-    .latest-news .post-info-wrapper a {
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: bold; }
-    .latest-news .post-info-wrapper .entry-meta {
-      color: #a1a1a1;
-      font-size: .9rem; }
-  .latest-news .thumbnail-wrapper {
-    height: 200px;
-    overflow: hidden;
-    position: relative; }
-    .latest-news .thumbnail-wrapper img {
-      max-width: none;
-      position: absolute; }
+
+.post-info-wrapper {
+  padding: .75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left; }
+  .post-info-wrapper a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold; }
+  .post-info-wrapper .entry-meta {
+    color: #a1a1a1;
+    font-size: .9rem; }
+
+.thumbnail-wrapper {
+  height: 200px;
+  overflow: hidden;
+  position: relative; }
+  .thumbnail-wrapper img {
+    max-width: none;
+    position: absolute; }
 
 /*--------------------------------------------------------------
 # Products page
@@ -935,12 +947,15 @@ object {
 /*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
+.widget {
+  margin: 0 0 1.5rem; }
+
 .widget-area h2 {
   text-transform: uppercase;
   font-size: 1.25rem; }
 
 .widget-area p {
-  font-size: 0.7rem; }
+  font-size: 1rem; }
 
 .widget-area a {
   color: #db272a;
@@ -949,6 +964,11 @@ object {
 .widget-area i {
   color: #808080;
   padding-right: 0.5rem; }
+
+.widget-area ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0; }
 
 .day-of-week {
   color: #db272a;
@@ -978,26 +998,27 @@ object {
           align-items: flex-start;
   padding-bottom: 1.5rem; }
 
-.product-info {
-  padding: 0 1.5rem; }
-  .product-info .entry-title {
-    line-height: 1;
-    margin-bottom: 1.5rem; }
+.product-info-type .entry-title {
+  line-height: 1;
+  margin-bottom: 1.5rem; }
+
+.page-header-search {
+  text-align: left;
+  text-transform: uppercase; }
+
+.entry-title-search {
+  text-align: left;
+  font-size: 1.8rem;
+  line-height: 1.8rem; }
+  .entry-title-search a {
+    color: #db272a;
+    text-decoration: none; }
 
 body {
   margin: 0 auto;
   font-family: 'Open sans', sans-serif;
   font-size: 16px;
   padding-top: 2.25rem; }
-
-.main-navigation {
-  width: 100%; }
-
-.main-navigation li:first-child {
-  border-left: 1px solid #e1e1e1; }
-
-.main-navigation li:last-child {
-  border-right: 1px solid #e1e1e1; }
 
 .site-header {
   border: 1px solid #e1e1e1;
@@ -1035,7 +1056,8 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   list-style: none;
-  margin-right: 2rem; }
+  margin-right: 2rem;
+  color: #a1a1a1; }
   .social-container i {
     padding-left: 2rem; }
 
@@ -1048,32 +1070,40 @@ body {
           justify-content: space-between;
   border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
-  box-shadow: 0 2px 3px #e1e1e1; }
+  box-shadow: 0 2px 3px #e1e1e1;
+  font-weight: 0; }
+  .main-navigation fieldset {
+    border: 0; }
 
 .menu-main-container a {
   border-left: solid 1px silver;
   padding: .75rem 2rem;
-  color: silver;
+  color: #808080;
   font-weight: bold; }
 
 .menu-main-container a:hover {
-  color: #400c0d;
-  border-bottom: 3px solid #db272a; }
+  color: #400c0d; }
 
 .menu-main-container a:active {
   color: #400c0d; }
 
+.menu-main-container .current_page_item:after {
+  content: "";
+  background-color: #db272a;
+  display: block;
+  height: 3px;
+  margin-top: -3px;
+  width: 100%; }
+
 .header-search {
+  float: right;
+  padding-top: 5px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
-  .header-search .search-field {
-    background-color: transparent;
-    border: 0;
-    outline: 0; }
-  .header-search button {
-    background: none;
-    border: 0; }
+
+.search-submit {
+  background-color: white; }
 
 .hero {
   background: url(../../images/hero-bread.jpg) no-repeat center center;

@@ -15,8 +15,6 @@
 .content-area  {
 	width: 73%;
 	padding-right: 5%;
-	// min-height: 80vh;
-	// flex-grow:1;
 	border-right: 1px solid #e1e1e1;
 }
 
@@ -24,7 +22,7 @@
 .widget-area {
 	width: 27%;
 	padding-left: 5%;
-	// flex-shrink:0;
+	
 }
 
 .entry-title {
@@ -67,6 +65,9 @@ background: url(../../images/hero-bread.jpg) center no-repeat;
 }
 
 }
+
+
+
 .call-to-action{
 	background-color: #fafafa;
     border: 1px solid #e1e1e1;
@@ -88,6 +89,9 @@ background: url(../../images/hero-bread.jpg) center no-repeat;
 }
 
 }
+
+
+
 
 .product-blocks {
    display: flex;
@@ -128,17 +132,13 @@ background: url(../../images/hero-bread.jpg) center no-repeat;
 	    }
 }
 
+
 .latest-news {
 	display: flex;
     justify-content: space-between;
     margin: 0 auto;
 
-
-    // ul {
-    // 	margin-left: 1.5rem;
-    // }
-
-     li {
+      li {
     background-color: #fff;
     border: 1px solid #e1e1e1;
     flex: 1 0 25%;
@@ -150,6 +150,9 @@ background: url(../../images/hero-bread.jpg) center no-repeat;
     display: block;
     
 }
+
+}
+
 
 	.post-info-wrapper{
 		
@@ -167,9 +170,8 @@ background: url(../../images/hero-bread.jpg) center no-repeat;
 		   	color: #a1a1a1;
             font-size: .9rem;
 		   }
+}
 
-		   
-			}
 			.thumbnail-wrapper {
 				height: 200px;
 				overflow: hidden;
@@ -181,7 +183,7 @@ background: url(../../images/hero-bread.jpg) center no-repeat;
 		    // top: 50%;
 			    }
 			}
-}
+
 
 /*--------------------------------------------------------------
 # Products page
@@ -195,35 +197,26 @@ background: url(../../images/hero-bread.jpg) center no-repeat;
     margin-bottom: 1.5rem;
     @include container;
     
-    .product-grid-item {
-    	width: 25%;
-    	border: 1px solid #e1e1e1;
-        margin-left: 0;
-    padding-left: 0;
-    // overflow: hidden;
-	// position: relative;
-	// height: 250px;
+        .product-grid-item {
+        	width: 25%;
+        	border: 1px solid #e1e1e1;
+            margin-left: 0;
+        padding-left: 0;
+       
+    	}
 
-	   //  img {
-	   //  	left: 50%;
-    // max-width: none;
-    // position: absolute;
-    // // top: 50%;
-	   //  }
-	}
-
-	.product-info {
-	    padding-left: .25rem;
-	    padding-bottom: 1rem;
-	    margin-top: 1rem;
-	    background: #fff;
-       &::before {
-    float: left;
-    width: 0;
-    white-space: nowrap;
-    content: "...................................................";
-}
-	}
+    	.product-info {
+    	    padding-left: .25rem;
+    	    padding-bottom: 1rem;
+    	    margin-top: 1rem;
+    	    background: #fff;
+               &::before {
+            float: left;
+            width: 0;
+            white-space: nowrap;
+            content: "...................................................";
+        }
+	    }
 
 	.price {
 	    float: right;
@@ -261,22 +254,32 @@ flex: 0 1 47.5%;
 /*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
+.widget
+{margin: 0 0 1.5rem;}
+
+
+
 .widget-area{
 
-h2{ text-transform: uppercase;
+        h2{ text-transform: uppercase;
         font-size: 1.25rem;
             }
 
-    p{
-        font-size: 0.7rem;
-    }
-    a{  color: $color-brand-red;
-        text-decoration: none;
-    }
-    i{
-        color: $color-brand-medium-grey;
-        padding-right: 0.5rem;
-    }}
+        p{
+            font-size: 1rem;
+        }
+        a{  color: $color-brand-red;
+            text-decoration: none;
+        }
+        i{
+            color: $color-brand-medium-grey;
+            padding-right: 0.5rem;
+        }
+ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}}
 
 .day-of-week {
 	color: $color-brand-red;
@@ -311,9 +314,24 @@ h2{ text-transform: uppercase;
     padding-bottom: 1.5rem;
 }
 
-.product-info {
-    padding: 0 1.5rem;
+.product-info-type {
+    // padding: 0 1.5rem;
     .entry-title {
     line-height: 1;
     margin-bottom: 1.5rem;}
+}
+
+
+.page-header-search {
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.entry-title-search {
+    text-align: left;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+     a {color: $color-brand-red;
+    text-decoration: none;
+}
 }
