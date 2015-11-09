@@ -12,6 +12,7 @@ body {
      border-bottom: 0;
      height: 118px;
      padding-top: 1rem;
+     
 
     
 }
@@ -66,6 +67,13 @@ body {
   
 
 }
+.main-navigation li:first-child {
+border-left: 1px solid #e1e1e1;
+}
+.main-navigation li:last-child {
+border-right: 1px solid #e1e1e1;
+  
+ }
 
 
 .menu-main-container {

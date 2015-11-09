@@ -67,6 +67,46 @@ get_header(); ?>
         wp_reset_postdata(); ?>
         </li>
         </ul>
+<!-- testimonial -->
+<section class="testimonials">
+  <div class="page-header">
+    <h1>WHAT OTHERS SAY ABOUT US</h1>
+  </div>
+  <hr class="decorative"></hr>
+  <ul>
+<?php
+        $args = array( 
+          'post_type'=>'testimonial',
+          'posts_per_page' => 4,
+          'order' => 'ASC' );
+        $testimonial_posts = get_posts( $args );
+        foreach ( $testimonial_posts as $post ) :
+          setup_postdata( $post ); ?>
+           <li>
+
+
+
+        <?php if ( has_post_thumbnail() ) : ?>
+      <?php the_post_thumbnail( 'thumbnail' ); ?>
+    <?php endif; ?>
+    <div class="client-info">
+      <?php the_content(); ?>
+<p class='client_name'><?php echo esc_html( CFS()->get('client_name') ); ?></p>
+<a href="http://localhost:3000/leredbread/testimonials/"><p class='client_title'><?php echo esc_html( CFS()->get('client_title') ); ?></p></a>
+</div>
+<?php endforeach; 
+        wp_reset_postdata(); ?>
+</li>
+</ul>
+</section>
+
+
+    
+  <!-- .entry-content -->
+
+    
+  <!--  end of testimonial -->
+
 
   </div>
 		</main><!-- #main -->
