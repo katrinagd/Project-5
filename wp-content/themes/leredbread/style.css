@@ -1071,12 +1071,10 @@ object {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 auto; }
+  margin: 0 auto;
+  list-style: none; }
 
 .testimonials li {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   width: 50%;
   padding: 1rem; }
 
@@ -1168,7 +1166,7 @@ body {
 .menu-main-container a:active {
   color: #400c0d; }
 
-.menu-main-container .current_page_item:after {
+.menu-main-container .current-menu-item:after {
   content: "";
   background-color: #db272a;
   display: block;

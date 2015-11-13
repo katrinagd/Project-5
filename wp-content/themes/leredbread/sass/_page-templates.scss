@@ -425,9 +425,9 @@ ul {
         flex-wrap: wrap;
         justify-content: space-between;
         margin: 0 auto;
+        list-style: none;
     }
     li{
-        display: flex;
         width: 50%;
         padding: 1rem;
     }
