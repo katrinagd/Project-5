@@ -127,3 +127,32 @@ function red_archive_title( $title ) {
      return $title;
  }
  add_filter( 'get_the_archive_title', 'red_archive_title' );
+
+
+ /**
+ * Restrict HTML tags in comment text.
+ */
+function lrb_filter_comment_text( $content ) {
+	$comment_text = wp_kses(
+		$content,
+		array(
+			'p' => array(),
+		)
+	);
+
+	return $comment_text;
+}
+add_filter( 'comment_text', 'lrb_filter_comment_text', 99 );
+
+/**
+ * Redirect single testimonial URLs to the testimonials archive page.
+ */
+function lrb_redirect_single_testmonials() {
+	$queried_post_type = get_query_var( 'post_type' );
+
+	if ( is_single() && 'testimonial' ==  $queried_post_type ) {
+		wp_redirect( get_post_type_archive_link( 'testimonial' ), 301 );
+		exit;
+	}
+}
+add_action( 'template_redirect', 'lrb_redirect_single_testmonials' );

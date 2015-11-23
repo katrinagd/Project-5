@@ -5,32 +5,26 @@
     @include container;
 
 }
-
 .site-content {
 	
     display: flex;
     @include container;
 }
-
 .content-area  {
-	width: 73%;
-	padding-right: 5%;
+	padding-top: 3%;
+    width: 73%;
+	padding-right: 3%;
 	border-right: 1px solid #e1e1e1;
 }
-
-
 .widget-area {
 	width: 27%;
 	padding-left: 5%;
-	
 }
-
 .entry-title {
 	text-transform: uppercase;
-	color: $color-brand-brown;
+	color: $color__brand-brown;
 	text-align: center;
 }
-
 .page-header {
 	text-align: center;
 	h1 {
@@ -42,8 +36,6 @@
 /*--------------------------------------------------------------
 # Front page
 --------------------------------------------------------------*/
-
-
 .hero
 {
 background: url(../../images/hero-bread.jpg) center no-repeat;
@@ -53,7 +45,6 @@ background: url(../../images/hero-bread.jpg) center no-repeat;
   display: flex;
   justify-content: center;
   width: 100%;
-
 .hero-text {
 	color: $color__background-body;
     font-family: 'Overlock',sans-serif;
@@ -63,19 +54,13 @@ background: url(../../images/hero-bread.jpg) center no-repeat;
     margin: 0;
     text-shadow: 2px 1px 2px rgba(100,100,100,.75);
 }
-
 }
-
-
-
 .call-to-action{
 	background-color: #fafafa;
     border: 1px solid #e1e1e1;
     padding: 1.5rem;
     margin-bottom: 3rem;
-   
-
-    .btn {
+     .btn {
     color: #fff;
     border: none;
     border-radius: 3px;
@@ -85,59 +70,55 @@ background: url(../../images/hero-bread.jpg) center no-repeat;
     line-height: 1;
     padding: .75rem 1.5rem;
     text-decoration: none;
-
 }
-
 }
-
-
-
-
 .product-blocks {
    display: flex;
    justify-content: center;
    align-items: center;
- li {
+   margin: 0;
+   padding: 0;
+  li {
  	list-style: none;
  	padding-left: 1rem;
-	padding-right: 1rem;
  }
-
 	.product-wrapper{
 		width: 25%;
-		
-       img {
-	width: 90%;
+        max-width: 250px;
+		img {
+	    width: 90%;
       }
 	}
 }
-
-.decorative {
+/* Decorative horizontal rule */
+hr.decorative {
     border: none;
     color: #e1e1e1;
-    margin-bottom: 3rem;
+    margin: 0 auto ($base__space-unit * 2);
     max-width: 320px;
     padding: 0;
-    width: 50%;
     text-align: center;
-    &::after {
-    	background: 0 0;
-	    content: '\f111';
-	    display: inline-block;
-	    font-family: FontAwesome;
-	    font-size: 14.4px;
-	    font-size: .9rem;
-	    position: relative;
-	    top: -.875em;
-	    }
-}
+    position: relative;
+    width: 50%;
 
+    &:after {
+        background: transparent;
+        color: #e1e1e1;
+        content: '\f111';
+        display: inline-block;
+        font-family: 'FontAwesome';
+        font-size: 14px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
 
 .latest-news {
 	display: flex;
     justify-content: space-between;
     margin: 0 auto;
-
       li {
     background-color: #fff;
     border: 1px solid #e1e1e1;
@@ -148,14 +129,9 @@ background: url(../../images/hero-bread.jpg) center no-repeat;
     padding-left: 0;
     overflow: hidden;
     display: block;
-    
 }
-
 }
-
-
 	.post-info-wrapper{
-		
 		padding: .75rem;
 		overflow: hidden;
 	    text-overflow: ellipsis;
@@ -171,24 +147,18 @@ background: url(../../images/hero-bread.jpg) center no-repeat;
             font-size: .9rem;
 		   }
 }
-
 			.thumbnail-wrapper {
 				height: 200px;
 				overflow: hidden;
 			    position: relative;
 			    img {
-			    	// left: 50%;
-		    max-width: none;
-		    position: absolute;
-		    // top: 50%;
+			    max-width: none;
+    		    position: absolute;
 			    }
 			}
-
-
 /*--------------------------------------------------------------
 # Products page
 --------------------------------------------------------------*/
-
 .product-grid {
 	display: flex;
 	flex-flow: wrap row;
@@ -196,15 +166,12 @@ background: url(../../images/hero-bread.jpg) center no-repeat;
     align-content: flex-start;
     margin-bottom: 1.5rem;
     @include container;
-    
-        .product-grid-item {
+            .product-grid-item {
         	width: 25%;
         	border: 1px solid #e1e1e1;
             margin-left: 0;
-        padding-left: 0;
-       
+            padding-left: 0;
     	}
-
     	.product-info {
     	    padding-left: .25rem;
     	    padding-bottom: 1rem;
@@ -217,7 +184,6 @@ background: url(../../images/hero-bread.jpg) center no-repeat;
             content: "...................................................";
         }
 	    }
-
 	.price {
 	    float: right;
 	    padding-right: .25rem;
@@ -225,81 +191,64 @@ background: url(../../images/hero-bread.jpg) center no-repeat;
 	    padding-bottom: 1rem;
 	    }
 }
-
 /*--------------------------------------------------------------
 # About page
 --------------------------------------------------------------*/
 .about-block {
 	display: flex;
     justify-content: space-between;
-
     h3 {
     color: #400c0d;
     font-size: 1.6rem;
     margin-bottom: 0;
     padding-bottom: 0;
-
 }
-
 }
-
 .about-block-item {
 flex: 0 1 47.5%;
 }
-
 .sub-head {
     color: #a1a1a1;
 }
-
 /*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
-
-
 .widget
 {
     margin: 0 0 1.5rem;
-
 }
-
 .widget_recent_entries {
-
     ul {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
-    a{  color: $color-brand-red;
+    a{  color: $color__brand-red;
             text-decoration: none;
         }
 }
 }
-
 .widget_categories {
-
     ul {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
-    a{  color: $color-brand-red;
+    a{  color: $color__brand-red;
             text-decoration: none;
         }
 }
 }
-
 .widget-area{
-
         h2{ text-transform: uppercase;
         font-size: 1.25rem;
             }
-
         p{
             font-size: 1rem;
         }
-        a{  color: $color-brand-red;
+        a{  color: $color__brand-red;
             text-decoration: none;
         }
         i{
-            color: $color-brand-medium-grey;
+            color: $color__brand-med-grey;
             padding-right: 0.5rem;
         }
 ul {
@@ -309,7 +258,7 @@ ul {
 }}
 
 .day-of-week {
-	color: $color-brand-red;
+	color: $color__brand-red;
 	font-weight: bold;
 }
 
@@ -322,7 +271,7 @@ ul {
 
 .product-type-page-header {
     margin-bottom: 1.5rem;
-    border-bottom: 1px dashed $color-brand-light-grey;
+    border-bottom: 1px dashed $color__brand-light-grey;
     padding-bottom: 1.5rem;
 
     .page-title{
@@ -339,18 +288,18 @@ ul {
     display: flex;
     align-items: flex-start;
     padding-bottom: 1.5rem;
-    border-bottom: 1px dashed $color-brand-light-grey;
+    border-bottom: 1px dashed $color__brand-light-grey;
     padding-bottom: 1.5rem;
 
     a {
-        color: $color-brand-red;
+        color: $color__brand-red;
         text-decoration: none;
         font-size: 2rem;  
         text-transform: none;
          
           }
-   a.hover {
-    color: $color-brand-brown;
+   a:hover {
+    color: $color__brand-brown;
     text-decoration: underline;
   }
 
@@ -383,27 +332,28 @@ ul {
 --------------------------------------------------------------*/
 
 .blog {
-    margin-top: 2rem;
-
-    .entry-title {
+      .entry-title {
     text-align: left;
 
     a {
-        color: $color-brand-red;
+        color: $color__brand-red;
         text-decoration: none;
         font-size: 1.8rem;  
         text-transform: none;
          
           }
-   a.hover {
-    color: $color-brand-brown;
-    text-decoration: underline;
+    img {
+    margin-top: 2rem;
   }
 
 }
+}
 
-
-
+.entry-title-single-post{
+    text-transform: uppercase;
+    color: $color__brand-near-black;
+    font-size: 2.2rem; 
+    text-align: left;
 }
 /* Contact page title */
 
@@ -432,14 +382,40 @@ ul {
         padding: 1rem;
     }
     li:first-child, li:nth-child(3) {
-        border-right: 1px dashed $color-brand-light-grey;
+        border-right: 1px dashed $color__brand-light-grey;
     }
     li:first-child, li:nth-child(2) {
-        border-bottom: 1px dashed $color-brand-light-grey;
+        border-bottom: 1px dashed $color__brand-light-grey;
     }
     
-
 }
 .client_name{
         font-weight: bold;
     }
+
+/* search results */
+.search-result{
+a {
+    color: $color__brand-red;
+    text-decoration: none;
+    font-weight: bold;
+  
+    &:hover,
+    &:focus,
+    {
+        color: $color__brand-brown;
+        text-decoration: underline;
+    }
+        
+}
+
+}
+.page-header-search {
+    border-bottom: 1px dashed #d2d2d2;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.entry-title-search {
+    font-size: 2rem;
+}

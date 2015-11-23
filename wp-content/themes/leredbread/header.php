@@ -12,7 +12,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		
 
 	<?php wp_head(); ?>
 	</head>
@@ -48,13 +48,11 @@
 
 <nav id="site-navigation" class="main-navigation" role="navigation">
 					<div class="container clearfix">
-					<div class="menu-main-container">
-						<div class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></div>
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-					</div>
-					<?php get_search_form();?>
-				
-					
+
+						<div class="header-search">
+							<?php get_search_form(); ?>
+						</div>
 					</div>
 				</nav><!-- #site-navigation -->
 

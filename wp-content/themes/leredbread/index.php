@@ -27,7 +27,10 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+			<?php the_posts_navigation( array(
+				'prev_text' => 'Older Posts &rarr;',
+    			'next_text' => '&larr; Newer Posts',
+			) ); ?>
 
 		<?php else : ?>
 

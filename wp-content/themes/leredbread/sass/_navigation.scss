@@ -6,9 +6,10 @@
 
 a {
 	color: $color__link;
+	text-decoration: none;
 
 	&:visited {
-		color: $color__link-visited;
+		color: $color__link
 	}
 	&:hover,
 	&:focus,
@@ -21,92 +22,104 @@ a {
 	&:hover,
 	&:active {
 		outline: 0;
+		text-decoration: underline;
 	}
 }
 
 /* Menus */
 
 .main-navigation {
+	background-color: white;
+	border-top: $base__border;
+	box-shadow: 0px 2px 3px 0px rgba(150, 150, 150, .25);
 	clear: both;
-	display: block;
-	float: left;
 	width: 100%;
-    font-weight: 700;
+
+	body:not(.home) & {
+		border-bottom: $base__border;
+	}
+
+	.menu-main-navigation-container {
+		float: left;
+	}
+
 	ul {
-		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: $base__space-unit;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
 	}
+
 	li {
+		border-right: $base__border;
 		float: left;
-		position: relative;
+
+		&:first-child {
+			border-left: $base__border;
+		}
+
+		a {
+			padding: ($base__space-unit / 2) $base__space-unit;
+		}
 
 		&:hover > a,
-		&.focus > a {
+		&:focus > a {
+			color: $color__brand-brown;
 		}
 	}
+
 	a {
+		color: $color__brand-med-grey;
 		display: block;
+		font-weight: bold;
 		text-decoration: none;
 	}
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a {
-	}
-}
+	.current_page_item,
+	.current-menu-item,
+	.current_page_ancestor {
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
+		&:after {
+			content: "";
+			background-color: $color__brand-red;
+			display: block;
+			height: 3px;
+			margin-top: -3px;
+			width: 100%;
+		}
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
+		& > a {
+			color: $color__brand-brown;
+		}
 	}
-	.main-navigation ul {
-		display: block;
+
+	.header-search {
+		float: right;
+		padding-top: 5px;
+
+		fieldset {
+			border: 0;
+			padding: 0;
+		}
+
+		label {
+			display: inline;
+			font-weight: normal;
+			margin-bottom: 0;
+		}
+
+		input[type="search"],
+		button {
+			background-color: transparent;
+			border: none;
+			border-radius: 0;
+			outline: 0;
+		}
+
+		button {
+			color: $color__brand-med-grey;
+			@include font-size(1);
+			padding: 0;
+		}
 	}
 }
 

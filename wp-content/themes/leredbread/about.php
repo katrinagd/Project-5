@@ -18,12 +18,32 @@ get_header(); ?>
 
 				
 				<?php echo CFS()->get('subtitle'); ?>
-				<div class="about-block"><div class="about-block-item">
-					<?php echo CFS()->get('team'); ?></div>
-				    <div class="about-block-item"><?php echo CFS()->get('bakery'); ?></div></div>
+				<div class="about-block">
+
+					<div class="about-block-item">
+                  <img src="<?php echo get_template_directory_uri() . '/images/team.jpg'; ?>" alt="Le Red Bread team" />
+                  <h3>Le Red Bread Team</h3>
+                  <p class="sub-head">Baking up a storm every day.</p>
+                  <?php echo CFS()->get( 'team' ); ?>
+               </div>
+
+               <div class="about-block-item">
+                  <img src="<?php echo get_template_directory_uri() . '/images/bakery.jpg'; ?>" alt="Le Red Bread bakery space" />
+                  <h3>Le Red Bread Bakery</h3>
+                  <p class="sub-head">A home away from home.</p>
+                  <?php echo CFS()->get( 'bakery' ); ?>
+               </div>
+
+				</div>
 
 				<?php echo CFS()->get('story'); ?>
-				<div class="call-to-action clearfix"><p>Feel free to contact us with any questions coments or suggestions. We even take custom orders!  <a class="btn" href="http://localhost:3000/leredbread/contact/">Contact Us</a></p></div>
+			
+				 <section class="call-to-action clearfix">
+            <p>
+               <span>Feel free to contact us with any questions coments or suggestions. We even take custom orders!</span>
+               <a href="/contact/" class="btn">Contact Us</a>
+            </p>
+         </section>
 			<?php endwhile; // End of the loop. ?>
 
 		<!-- </main> --><!-- #main -->
@@ -32,3 +52,4 @@ get_header(); ?>
 	<!-- #primary -->
 
 <?php get_footer(); ?>
+ 

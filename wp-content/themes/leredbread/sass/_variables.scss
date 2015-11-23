@@ -1,11 +1,14 @@
 // Structure
 
-$base__space-unit: 1.5em;
+$base__space-unit: 1.5rem;
+$base__border: 1px solid #e1e1e1;
+$base__border-dashed: 1px dashed #d2d2d2;
 
 // Colors
 
 $color__background-body: #fff;
-$color__text-main: #404040;
+$color__background-tint: #fafafa;
+$color__text-main: #222;
 
 $color__background-screen: #f1f1f1;
 $color__text-screen: #21759b;
@@ -15,19 +18,15 @@ $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 $color__border-abbr: #666;
 
-$color__link: #808080;
-$color__link-visited: #808080;
-$color__link-hover: #222222;
+$color__brand-light-grey: #a1a1a1;
+$color__brand-med-grey: #808080;
+$color__brand-dark-grey: #333;
+$color__brand-near-black: #222;
+$color__brand-brown: #400c0d;
+$color__brand-red: #db272a;
 
-// Colors
-$color-background-main: #ffffff;
-$color-off-white: #fafafa;
-$color-brand-red: #db272a;
-$color-brand-brown: #400c0d;
-$color-brand-light-grey: #a1a1a1;
-$color-brand-medium-grey: #808080;
-$color-brand-dark-grey: #333333;
-$color-brand-black: #222222;
+$color__link: $color__brand-red;
+$color__link-hover: darken($color__brand-red, 20%);
 
 // Typography
 
